@@ -1,0 +1,369 @@
+@import 'mixinsVariables';
+
+:root {
+    --animate-delay: 4s;
+}
+
+
+/*==========  ID Rules  ==========*/
+#not-found {
+    background-color: $Error404;
+}
+
+.error-btn button  {
+    width: 55% !important;
+    padding: 5px;
+    display: block;
+    margin: 0% auto !important;
+    @include landscapeSet {
+       width: 70%;
+       button {
+           width: 60%;
+       }
+    
+    }
+}
+
+#transparent {
+    background-color: transparent;
+    .column {
+        height: 100%;
+        flex-direction: column;
+        img {
+            width: 90%;
+            margin: 0% 5%;
+        }
+        h1{
+            color: $MenuOff;
+            margin-bottom: 0px;
+        }
+    }
+   
+    @include landscapeSet {
+        .column {
+            img {
+                height: 70%;
+            }
+        }
+    }
+}
+
+#no-items {
+    @include desktopView {
+        font-size: 15px;
+    }
+}
+
+#header-fit {
+    width: 2px;
+    height: 25px;
+    border-radius: 20px;
+    display: inline-block;
+    transform: rotate(180deg);
+    background-color: $CDcolor;
+}
+
+#menu-flexbox {
+    @include logoSetup;
+    margin: 0px auto;
+}
+
+#total-display {
+    width: 60%;
+    font-size: 15px;
+    margin-top: 15px;
+    border-top: 2px solid $CDcolor;
+    @include landscapeSet {
+        width: 40%;
+    }
+    @include desktopView {
+        width: 30%;
+        margin-top: 25px;
+    }
+}
+
+#side-by-side {
+    @include landscapeSet {
+        width: 70% !important;
+        margin: 0px auto;
+        .one-off {
+            width: 55% !important;
+        }
+    }
+}
+
+.button-holder {
+    width: 80%;
+    height: 100%;
+    margin: 20px auto;
+    button {
+        width: 40%;
+        color: $White;
+        margin: 0% 5%;
+        font-size: 13px;
+        padding: 0px 15px;
+        border-radius: 5px;
+        font-family: $HeaderFont;
+        border-color: transparent;
+        background-color: $CDcolor;
+        a {
+            color: $White;
+            text-decoration: none;
+        }
+    }
+    @include landscapeSet {
+        .error-btn {
+            width: 70%;
+            button {
+                width: 60%;
+            }
+        }
+    }
+    
+    @include desktopView {
+        width: 40%;
+    }
+}
+
+
+
+
+/*==========  Class Rules  ==========*/
+.on {
+    color: $CDcolor;
+    border-bottom: $CDcolor;
+    transition: all 250ms ease-in-out;
+}
+
+.off {
+    color: $MenuOff;
+    border-bottom: none;
+    border-color: transparent;
+    transition: all 500ms ease-in-out;
+}
+
+.carousel-item {
+    height: 0;
+    position: relative;
+    padding-bottom: 70%;
+    .d-block {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        @include absoluteSet;
+    }
+    @include landscapeSet {
+        padding-bottom: 60%;
+    }
+}
+
+.menu-options {
+    width: 33.3%;
+    height: 100%;
+    border-bottom: 5px solid;   
+    article {
+        @include fitter;
+        margin: 0px auto;
+        padding: 13px 0px;
+        :hover {
+            cursor: pointer;
+        }      
+        img {
+            @include logoAdjust(25px, 3px);
+        }
+        h2 {
+            font-size: 15px;
+            display: inline-block;
+            border: none !important;
+            font-family: $HeaderFont;
+            @include fontAlign(10%, 20%);
+            margin-inline-start: 5px;
+        }
+    }
+    @include landscapeSet {
+        width: 25%;
+        margin: 0px auto;
+    }
+
+    @include minWidth(1370px) {
+        width: 20%;
+        margin: 0px auto;
+        article {
+            padding: 20px 0px;
+            h2 {
+                font-size: 23px;
+            }
+            img {
+                @include logoAdjust(40px, 5px);
+            }
+        } 
+    }
+}
+
+.border-bop {
+    border: none !important;
+    background-color: transparent !important;
+}
+
+.float {
+    float: right;
+    position: relative;
+    text-align: center;
+    .green-light {
+        border-radius: 11px;
+        @include absoluteSet;
+        @include logoAdjust(14px, 0px);
+        background-color: rgb(6, 179, 6);
+        p {
+            margin: 0%;
+            color: $White;
+            padding: 1px;
+            font-size: 10px;
+            font-family: $BodyFont;
+        }
+        @include minWidth(1370px) {
+            border-radius: 17px;
+            @include logoAdjust(17px, 0px);
+            p {
+                padding: 2px;
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+.fixed {
+    top: 0;
+    position: sticky;
+    z-index: 200;
+}
+
+.header-flexbox {
+    @include logoSetup;
+    display: inline-flex;
+}
+
+.coffee-menu {
+    @include container;
+}
+
+.nav-wrapper {
+    @include container;
+    @include landscapeSet {
+        .carousel {
+            max-height: 100vh;
+            overflow: hidden;
+        }
+    }
+    @include minWidth(1366px) {
+        .carousel {
+            width: 80vw;
+            max-height: 80vh;
+            margin: 20px auto;
+            @include borderDecor(50px);
+        }
+    }
+}
+
+.header-logo {
+    width: 90%;
+    padding: 3% 0%;
+    margin: 0px auto;
+    img {
+        @include logoAdjust(25px, 3px);
+    }
+    h1 {
+        margin: 0px;
+        padding: 3px;
+        font-size: 15px;
+        color: $CDcolor;
+        font-weight: lighter;
+        display: inline-block;
+        font-family: $LogoFont;
+        @include fontAlign(-30%, -40%);
+    }
+    @include landscapeSet {
+        padding: 1.5% 0%;
+    }
+    @include minWidth(1370px) {
+        h1 {
+            font-size: 23px;
+        }
+        img {
+            @include logoAdjust(40px, 5px);
+        }
+        #header-fit {
+            height: 40px;
+        }
+    }
+}
+
+
+
+
+/*==========  Cart Rules  ==========*/
+.increment-spot {
+    width: 15%;
+    @include logoSetup;
+    display: inline-flex;
+    p {
+        color: $Black;
+        font-size: 17px;
+        display: inline-block;
+    }
+}
+
+.coff-do {
+    padding: 5% 0%;
+    text-align: center;
+    border-top: 10px double $CDcolor;
+    border-bottom: 10px double $CDcolor;
+    background-color: transparent;
+    h1 {
+        width: 80%;
+        color: $CDcolor;
+        font-size: 25px;
+        margin: 0px auto;
+        padding: 15px 0px;
+        font-family: $BodyFont;
+        @include desktopView {
+            font-size: 25px;
+        }
+    }
+    .cart-space {
+        background-color: transparent;
+        @include desktopView {
+            width: 50%;
+        }
+        .cart-holder {
+            width: 100%;
+            .minus-sign {
+                margin: 5px auto;
+                border-radius: 10px;
+                @include logoAdjust(15px, 0px);
+                img {
+                    margin: 0px;
+                    padding: 0px 1px;
+                    vertical-align: top;
+                    @include logoAdjust(13px, 0px);
+                }
+            }
+        }
+        .cart-photos {
+            margin: 5px auto;
+            padding-right: 30px;
+            padding-bottom: 30px;
+        }
+        .one-off {
+            width: 70%;
+            text-align: left;
+            h3, p { 
+                font-size: 11px;
+                margin: 5px 10px;
+                display: inline-block;
+            }
+        }
+    }
+ 
+}

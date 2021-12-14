@@ -1,0 +1,225 @@
+@import 'mixinsVariables';
+
+:root {
+    --animate-delay: 4s;
+}
+
+/*==========  Coffee Rules  ==========*/
+.coffee-shows {
+    @include container;
+    width: 90%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: $WhiteSmoke;
+    .coffee-container {
+        width: 90%;
+        margin: 15px auto;
+        @include logoSetup;
+        .side-off {
+            width: 65%;
+            
+            margin: 5px auto;
+            h3 {
+                font-size: 15px;
+            }
+            p {
+                margin: 5px 0px;
+                font-size: 12px;
+            }
+            @include landscapeSet {
+                padding: 0%;
+            }
+        }
+        .plus-sign {
+            margin: 10px auto;
+            border-radius: 20px;
+            background-color: $CDcolor;
+            @include logoAdjust(30px, 0px);
+            img {
+                margin: 5px;
+            }
+        }
+    }
+    @include desktopView {
+        width: 45%;
+    }
+}
+
+.coffee-photos {
+    height: 0;
+    position: relative;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    img {
+        display: block;
+        object-fit: cover;
+        @include container;
+        border-radius: 50px;
+        @include absoluteSet;
+    }
+}
+
+
+
+
+/*==========  Class Rules  ==========*/
+.display {
+    display: none;
+}
+
+.img-container {
+    height: 0;
+    position: relative;
+    padding-bottom: 70%;
+    .test-image {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        @include absoluteSet;
+        border-bottom-right-radius: 50px;
+    }
+    @include landscapeSet {
+        padding-right: 50%;
+        padding-bottom: 50%;
+        .test-image {
+            border-radius: 0px;
+        }
+    }
+}
+
+.special-items {
+    width: 100%;
+    height: 100%;
+    @include landscapeSet {
+        width: 50%;
+        height: 100%; 
+    }
+}
+
+
+.card {
+    @include landscapeSet {
+        flex-direction: row !important;
+        .img-container {
+            padding-top: 50%;
+        }
+        .card-body {
+            width: 50%;
+        }
+    }
+}
+
+.space {
+    width: 80%;
+    display: inline-block;
+    margin: 20px 10%;
+    text-align: center;
+    font-family: $BodyFont;
+    h3 {
+        margin: 0px;
+        font-size: 20px;
+        font-weight: bolder;
+    }
+    p {
+        color: $Black;
+        font-size: 15px;
+        font-weight: lighter;
+    }
+    .ratings {
+        @include fitter;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        img {
+            @include logoAdjust(30px, 3px);
+        }
+    }
+    @include landscapeSet {
+        margin: 0% 10%;
+        padding-top: 20%;
+    }
+    @include nestHub(640px, 900px) {
+        h3 {
+            font-size: 23px;
+        }
+        p {
+            font-size: 15px;
+        }
+        .ratings {
+            margin: 13px auto;
+        }
+    }
+    @include minWidth(1370px) {
+        h3 {
+            font-size: 25px;
+        }
+        p {
+            font-size: 20px;
+        }
+        .ratings {
+            margin: 15px auto;
+        }
+    }
+    
+}
+
+.menu-wrapper {
+    margin: 50px auto;
+    @include menuSetup;
+    .special-shows {
+        width: 80%;
+        height: 100%;
+        margin: 0px auto;
+        position: relative;
+        @include menuSetup;
+        margin-bottom: 20px;
+        background-color: $WhiteSmoke; 
+        .add-to-cart {
+            border-radius: 50px;
+            @include absoluteSet;
+            background-color: $CDcolor;
+            @include logoAdjust(40px, 0px);
+            margin-left: 92.7%;
+            margin-top: 50%;
+            @include nestHub(768px, 768px) {
+                margin-left: 96%;
+                margin-top: 58%;
+            }
+            @include minWidth(1370px) {
+                margin-left: 94%;
+            }
+            img {
+                margin: 10px;
+            }
+        }
+        @include landscapeSet {
+            width: 90%;
+            flex-direction: row;
+        }
+    }
+    @include desktopView {
+        width: 100%;
+        flex-direction: row;
+        .special-shows {
+            width: 45%;
+            border-top-right-radius: 50px;
+        }
+        @include landscapeSet {
+            .space {
+                padding-top: 15%;
+            }
+            
+            .special-items p {
+                margin-bottom: 0px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+

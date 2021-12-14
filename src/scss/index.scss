@@ -1,0 +1,83 @@
+@import 'mixinsVariables';
+
+
+/*==========  Class Rules  ==========*/
+.padding-layer {
+    flex-wrap: nowrap;
+    .checkout-spin {
+        width: 5px !important;
+        height: 100px !important;
+    }
+    img {
+        padding: 0px 15px;
+    }
+}
+.checkout-container {
+    width: 100vw;
+    height: 100vh;
+    @include menuSetup;
+    align-items: center;
+    justify-content: center;
+    background-color: $WhiteSmoke;
+}
+
+.checkout-box {
+    width: 100%;
+    height: 50%;
+    @include menuSetup;
+    align-items: center;
+    justify-content: center;
+    background-color: $CDcolor;
+    h1 {
+        color: $White;
+        margin: 20px auto;
+        font-size: 35px !important;
+        font-family: $LogoFont;
+    }
+    .button-holder {
+        height: fit-content;
+        button {
+            background-color: $White;
+            a {
+                color: $CDcolor;
+                font-weight: bolder;
+                font-family: $BodyFont;
+            }
+        }
+    }
+    @include landscapeSet {
+        height: 85%;
+        .button-holder {
+            width: 50%;
+        }
+    }
+    @include minWidth(1024px) {
+        height: 55%;
+        .button-holder {
+            width: 30%;
+        }
+    }
+    @include minWidth(1370px) {
+        height: 60%;
+        .button-holder {
+            width: 20%;
+        }
+    }
+    
+}
+
+/*==========  Animation Rules  ==========*/
+@media (prefers-reduced-motion: no-preference) {
+    .image-spin {
+      animation: image-spin-spin infinite 10s linear;
+    }
+}
+
+@keyframes image-spin-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}

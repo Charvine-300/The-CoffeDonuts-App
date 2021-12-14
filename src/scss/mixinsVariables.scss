@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300&display=swap');
+
+
+$LogoFont: 'Lobster';
+$HeaderFont: 'Kalam';
+$BodyFont: 'Spartan';
+$Black: hsl(0, 0%, 0%);
+$White: hsl(0, 0%, 100%);
+$MenuOff: hsl(0, 0%, 77%);
+$WhiteSmoke: hsl(0, 0%, 90%);
+$CDcolor: hsl(191, 86%, 52%);
+$Error404: hsl(191, 76%, 33%);
+
+
+@mixin menuSelect {
+    /*&:active::before {
+        transition: all 0.5s ease-in-out;
+        border-bottom: 3px solid $CDcolor;
+        h1 {
+            color: $CDcolor;
+        }
+    }*/
+    &:hover {
+        cursor: pointer;
+    }
+    &:after {
+        content: '';
+        display: block;
+        transform: scaleX(0);  
+        border-bottom: solid 3px $CDcolor;  
+        transition: transform 250ms ease-in-out;
+    }
+    &:hover:after {
+        transform: scaleX(1); 
+    }
+}
+
+@mixin absoluteSet {
+    position:  absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+
+@mixin logoSetup {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+@mixin menuSetup {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+@mixin logoDivide {
+    border-radius: 20px;
+    display: inline-block;
+    transform: rotate(180deg);
+}
+
+@mixin fontAlign($mobile, $desktop) {
+    top: 50%;
+    position: relative;
+    transform: translateY($mobile); 
+    margin-block-end: auto;
+    margin-block-start: auto;
+    @include minWidth(1370px) {
+        transform: translateY($desktop);
+    }
+}
+
+@mixin container {
+    width: 100%;
+    height: 100%;
+    margin: 0% auto;
+}
+
+@mixin fitter {
+    margin: 0px auto;
+    width: fit-content;
+    height: fit-content;
+}
+
+@mixin logoAdjust($size, $wrap) {
+    width: $size;
+    height: $size;
+    padding: $wrap;
+    display: inline-block;
+}
+
+@mixin landscapeSet {
+    @media screen and (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin desktopView {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin nestHub($min, $max) {
+    @media screen and (min-width: $min) and (max-width: $max) {
+        @content;
+    }
+}
+
+@mixin minWidth($arch) {
+    @media screen and (min-width: $arch) {
+        @content;
+    }
+}
+
+@mixin borderDecor($digit) {
+    border-top-left-radius: $digit;
+    border-bottom-right-radius: $digit;
+}

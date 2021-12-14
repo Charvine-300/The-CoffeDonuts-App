@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300&display=swap");
+/*==========  Class Rules  ==========*/
+.padding-layer {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+.padding-layer .checkout-spin {
+  width: 5px !important;
+  height: 100px !important;
+}
+.padding-layer img {
+  padding: 0px 15px;
+}
+
+.checkout-container {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #e6e6e6;
+}
+
+.checkout-box {
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #1bc7ee;
+}
+.checkout-box h1 {
+  color: white;
+  margin: 20px auto;
+  font-size: 35px !important;
+  font-family: "Lobster";
+}
+.checkout-box .button-holder {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.checkout-box .button-holder button {
+  background-color: white;
+}
+.checkout-box .button-holder button a {
+  color: #1bc7ee;
+  font-weight: bolder;
+  font-family: "Spartan";
+}
+@media screen and (orientation: landscape) {
+  .checkout-box {
+    height: 85%;
+  }
+  .checkout-box .button-holder {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .checkout-box {
+    height: 55%;
+  }
+  .checkout-box .button-holder {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1370px) {
+  .checkout-box {
+    height: 60%;
+  }
+  .checkout-box .button-holder {
+    width: 20%;
+  }
+}
+
+/*==========  Animation Rules  ==========*/
+@media (prefers-reduced-motion: no-preference) {
+  .image-spin {
+    -webkit-animation: image-spin-spin infinite 10s linear;
+            animation: image-spin-spin infinite 10s linear;
+  }
+}
+@-webkit-keyframes image-spin-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes image-spin-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}

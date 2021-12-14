@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300&display=swap");
+/*==========  ID Rules  ==========*/
+#cross-fit {
+  width: 3px;
+  height: 80px;
+  border-radius: 20px;
+  display: inline-block;
+  background-color: white;
+}
+
+.flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 10px;
+}
+
+/*==========  CLass Rules  ==========*/
+.login-space {
+  width: 100%;
+  height: 100vh;
+  background: url(CD_1.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+@media screen and (orientation: landscape) {
+  .login-space {
+    /*.App-logo {
+        height: 92vh;
+        padding: 4vh 0vh;
+    }*/
+  }
+  .login-space .App-header {
+    min-height: 100vh;
+    border-radius: 0px;
+    padding: 0px;
+  }
+  .login-space .small-box {
+    padding-top: 0vh;
+  }
+  .login-space h1 {
+    margin: 15px auto;
+  }
+  .login-space .entrance-logo img {
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    display: inline-block;
+  }
+  .login-space #cross-fit {
+    height: 70px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .login-space .entrance-logo img {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    display: inline-block;
+  }
+  .login-space #cross-fit {
+    height: 110px;
+  }
+  .login-space .App-header {
+    min-height: 70vh;
+    border-radius: 40px;
+  }
+  .login-space .small-box {
+    width: 80vw;
+    margin: 0% auto;
+    padding-top: calc((100vh - 70vh) / 2);
+  }
+}
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+  .login-space .small-box {
+    width: 70vw;
+  }
+  .login-space .App-header {
+    padding: 20px 0px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1024px) {
+  .login-space .entrance-logo img {
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    display: inline-block;
+  }
+  .login-space #cross-fit {
+    height: 90px;
+  }
+  .login-space .App-header {
+    padding: 20px 0px;
+  }
+}
+
+.entrance-logo {
+  margin: 0px auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.entrance-logo img {
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+  display: inline-block;
+}
+
+.App-logo {
+  width: 80vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.App-logo h1 {
+  font-family: "Lobster";
+  text-align: center;
+  font-weight: lighter;
+}
+
+.small-box {
+  width: 80vw;
+  margin: 0% auto;
+  padding-top: calc((100vh - 64vh) / 2);
+}
+
+.App-header {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 64vh;
+  padding: 20px 0px;
+  border-radius: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #1bc7ee;
+  font-size: calc(10px + 2vmin);
+}
+
+/*==========  Element Rules  ==========*/
+p {
+  margin: 0px;
+  color: red;
+  font-size: 12px;
+  font-family: "Kalam";
+}
+
+form {
+  width: 80%;
+  margin: 0% auto;
+}
+form label {
+  font-family: "Kalam";
+}
+form input {
+  color: white;
+  width: 70%;
+  display: block;
+  margin-bottom: 15px;
+  font-family: "Kalam";
+  border-color: transparent;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid white;
+}
+form button {
+  color: #1bc7ee;
+  padding: 0px 15px;
+  border-radius: 5px;
+  font-size: 17px;
+  font-family: "Kalam";
+  border-color: transparent;
+  background-color: white;
+}
+form button a {
+  color: #1bc7ee;
+  text-decoration: none;
+}
+@media screen and (orientation: landscape) {
+  form {
+    width: 40%;
+  }
+  form input {
+    margin-bottom: 10px;
+  }
+  form p {
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+}
