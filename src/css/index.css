@@ -32,7 +32,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #e6e6e6;
+  background-color: white;
 }
 
 .checkout-box {
@@ -92,7 +92,7 @@
 }
 @media screen and (min-width: 1370px) {
   .checkout-box {
-    height: 60%;
+    height: 70%;
   }
   .checkout-box .button-holder {
     width: 20%;

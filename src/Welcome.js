@@ -15,6 +15,7 @@ import C5 from './images/C5.jpg';
 import C6 from './images/C6.jpg';
 import CD from './images/CD.jpg';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 
 const Welcome = () => {

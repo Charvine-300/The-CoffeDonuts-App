@@ -5,7 +5,22 @@
   --animate-delay: 4s;
 }
 
+body {
+  background-color: transparent;
+}
+
 /*==========  ID Rules  ==========*/
+@media screen and (orientation: landscape) {
+  #only-btn {
+    width: 40% !important;
+  }
+}
+@media screen and (min-width: 1370px) {
+  #only-btn {
+    width: 20% !important;
+  }
+}
+
 #not-found {
   background-color: #147d94;
 }
@@ -17,11 +32,11 @@
   margin: 0% auto !important;
 }
 @media screen and (orientation: landscape) {
-  .error-btn button {
-    width: 70%;
+  .error-btn {
+    width: 70% !important;
   }
-  .error-btn button button {
-    width: 60%;
+  .error-btn button {
+    width: 60% !important;
   }
 }
 

@@ -18,7 +18,7 @@
     @include menuSetup;
     align-items: center;
     justify-content: center;
-    background-color: $WhiteSmoke;
+    background-color: $White;
 }
 
 .checkout-box {
@@ -58,7 +58,7 @@
         }
     }
     @include minWidth(1370px) {
-        height: 60%;
+        height: 70%;
         .button-holder {
             width: 20%;
         }

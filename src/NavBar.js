@@ -7,7 +7,8 @@ import blueDonut from './images/blueDonut.png';
 import blueCoffee from './images/blueCoffee.png';
 
 
-const Navbar = ({ hide, itemNo }) => {
+const Navbar = ({ showFunction, hide, itemNo }) => {
+
   return (  
     <div className={`nav-wrapper fixed ${hide}`}>
       <div className="header-logo animate__animated animate__slideInDown">

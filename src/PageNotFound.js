@@ -5,7 +5,7 @@ import './css/coffeeDonuts.css';
 import { Link } from 'react-router-dom';
 import NotFound from './images/404Page.svg';
 
-const PageNotFound = () => {
+const PageNotFound = ({ showFunction }) => {
 
   return(
     <div className="checkout-container" id="not-found">
@@ -14,7 +14,7 @@ const PageNotFound = () => {
           <img src={NotFound} alt="Error: 404" title="Page Not Found" />
           <h1> Page Not Found </h1>
           <div className="button-holder error-btn">
-            <button type="submit"> <Link to='/menu'> Back To Menu </Link> </button>
+            <button type="submit" onClick={showFunction}> <Link to='/menu'> Back To Menu </Link> </button>
           </div>
         </div>
       </div>

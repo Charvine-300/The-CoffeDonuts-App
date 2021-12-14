@@ -23,7 +23,7 @@ const CheckOut = ({ showFunction }) => {
           </div>
           <h1> Ready For Pickup! </h1>
           <div className="button-holder error-btn">
-            <button type="submit" onClick={showFunction}> <Link to='/'> Login </Link> </button>
+            <button type="submit" id="only-btn" onClick={showFunction}> <Link to='/'> Login </Link> </button>
           </div>
         </div>
       }

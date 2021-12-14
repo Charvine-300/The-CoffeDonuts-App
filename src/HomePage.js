@@ -1,10 +1,11 @@
 import Cart from './Cart';
 import Menu from './Menu';
 import Navbar from './NavBar';
-import './css/coffeeDonuts.css';
 import Welcome from './Welcome';
 import CheckOut from './CheckOut';
 import ScrollToTop from './ScrollToTop';
+import PageNotFound from './PageNotFound';
+import './css/coffeeDonuts.css';
 import { useState, React } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
@@ -20,6 +21,7 @@ const HomePage = ({ saveUser }) => {
   function hideComponent() {
     setCheckoutHide('display');
   }
+
   function showComponent() {
     setCheckoutHide('');
   }
@@ -63,6 +65,9 @@ const HomePage = ({ saveUser }) => {
           </Route>
           <Route exact path="/checkout">
            <CheckOut show={showComponent} />
+         </Route>
+         <Route path="*">
+           <PageNotFound showFunction={showComponent} />
          </Route>
         </Switch>
         <Menu hide={checkoutHide} donutItems={addDonuts} specialsItems={addSpecials} coffeeItems={addCoffee} cartAlert={addToCart} />

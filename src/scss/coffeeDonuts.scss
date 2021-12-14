@@ -4,21 +4,36 @@
     --animate-delay: 4s;
 }
 
+body {
+    background-color: transparent;
+}
 
-/*==========  ID Rules  ==========*/
+
+/*==========  ID Rules  ==========*/    
+#only-btn {
+    @include landscapeSet {
+        width: 40% !important;
+    }
+    @include minWidth(1370px) {
+        width: 20% !important;
+    }
+}
+
 #not-found {
     background-color: $Error404;
 }
 
-.error-btn button  {
-    width: 55% !important;
+.error-btn  {
+    button {
+        width: 55% !important;
     padding: 5px;
     display: block;
     margin: 0% auto !important;
+    }
     @include landscapeSet {
-       width: 70%;
+       width: 70% !important;
        button {
-           width: 60%;
+           width: 60% !important;
        }
     
     }
