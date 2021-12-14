@@ -24,7 +24,7 @@ const Welcome = () => {
       <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
         <div className="carousel-inner">
           <div className="carousel-item active" data-bs-interval="8000">
-            <img src={C1} className="d-block w-100" alt="Slide 1" title="Cup of Coffee" /> 
+            <img src={CD} className="d-block w-100" alt="Slide 1" title="Cup of Coffee" /> 
           </div>
           <div className="carousel-item" data-bs-interval="8000">
             <img src={D1} className="d-block w-100" alt="Slide 2" title="Donut Display" />
@@ -60,7 +60,7 @@ const Welcome = () => {
             <img src={D6} className="d-block w-100" alt="Slide 12" title="Resturant Setup" />
           </div>
           <div className="carousel-item" data-bs-interval="8000">
-            <img src={CD} className="d-block w-100" alt="Slide 13" title="Coffee Dounts :)" />
+            <img src={C1} className="d-block w-100" alt="Slide 13" title="Coffee Dounts :)" />
           </div>
         </div>
         {/*<button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
